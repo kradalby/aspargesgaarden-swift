@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <sergey-import src="head">
+    <link rel="stylesheet" href="gjestebok.css" />
+  </sergey-import>
+
+  <body>
+    <sergey-import src="nav" />
+
+    <h1 class="overskrift">Gjestebok</h1>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <img class="bildeen" img src="bilder/lysthus1.jpg" height="500px" />
+        <div class="text">“Et perfekt sted for alleslags happenings!”</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img class="bildeto" img src="bilder/lysthus2.jpg" height="500px" />
+        <div class="text">
+          “Herlige omgivelser både ute og inne og veldig proff betjening."
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img class="bildetre" img src="bilder/lysthus3.jpg" height="500px" />
+        <div class="text">"Et flott sted med god stemning.”</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img class="bildetre" img src="bilder/fjoset5.jpg" height="500px" />
+        <div class="text">
+          "Fantastisk fint sted! Egnet for både selskap og møter."
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img class="bildetre" img src="bilder/låven3.jpg" height="500px" />
+        <div class="text">
+          "Koselig og varmende sted for bryllup og bryllupsfest!"
+        </div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+    <script src="carousel.js"></script>
+
+    <sergey-import src="footer" />
+  </body>
+</html>
