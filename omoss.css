@@ -1,0 +1,111 @@
+.omoss {
+  color: #b7a8a2;
+  font-family: luxus-brut, cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  margin-left: 100px;
+  margin-top: 30px;
+  margin-bottom: -40px;
+}
+
+.punkt2 {
+  margin-left: 250px;
+  margin-top: -105px;
+}
+
+.en,
+.to,
+.tre {
+  margin-left: 100px;
+  margin-top: 25px;
+}
+
+p {
+  color: #757471;
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+
+h1 {
+  color: #9c8d87;
+  font-family: rift-soft, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #dcaca3;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.takontakt {
+  margin-left: 220px;
+  margin-top: 50px;
+}
+
+.ikoner {
+  margin-left: 650px;
+  margin-top: -335px;
+  max-width: 700px;
+  min-width: 280px;
+  text-align: center;
+}
+
+.ikon {
+  height: 120px;
+  width: 120px;
+  padding: 10px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* MOBIL */
+@media screen and (max-width: 1265px) {
+  .ikoner {
+    margin-left: 650px;
+    margin-top: -400px;
+    max-width: 700px;
+    min-width: 280px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .omoss {
+    font-size: 70px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .p {
+    font-size: 14px;
+  }
+
+  .en,
+  .to,
+  .tre {
+    margin-left: 20px;
+    margin-right: 50px;
+  }
+
+  .takontakt {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+
+  .ikoner {
+    height: 350px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    text-align: center;
+  }
+}

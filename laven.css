@@ -1,0 +1,46 @@
+.overskrift2 {
+  color: #b7a8a2;
+  margin-bottom: -20px;
+  font-family: luxus-brut, cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.låvenbilde,
+.bilde {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.låvenpers {
+  margin-top: -620px;
+  margin-left: 70%;
+}
+
+.låveninfo {
+  margin-top: -550px;
+  margin-left: 70%;
+}
+
+@media screen and (max-width: 799px) {
+  .overskrift2 {
+    font-size: 70px;
+  }
+
+  .låvenbilde,
+  .bilde {
+    height: 250px;
+  }
+
+  .låvenpers,
+  .låveninfo {
+    height: 80px;
+    margin-top: -200px;
+    margin-left: 70%;
+  }
+}
