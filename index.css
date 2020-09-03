@@ -1,94 +1,94 @@
 * {
-    margin: 0; /* nullstiller nettlesere sin innlagt css */
-    padding: 0;
-    box-sizing: border-box;
-    color: white;
-    font-weight: 400;
-    font-style: normal;
+  margin: 0; /* nullstiller nettlesere sin innlagt css */
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html {
-    background: url(bilder/forside.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background: url(bilder/forside.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
-    display: grid;
+  display: grid;
 }
 
 .velkommen {
-    font-size: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10%;
-    text-shadow: black;
-    font-family: roboto, sans-serif;
-    font-weight: 300;
-    font-style: normal;
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  text-shadow: black;
+  font-family: roboto, sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .aspargesg {
-    margin-top: 10px;
-    font-size: 80px;
-    font-family: luxus-brut, cursive;
-    margin-left: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    text-shadow: black;
+  margin-top: 10px;
+  font-size: 80px;
+  font-family: luxus-brut, cursive;
+  margin-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: black;
 }
 
 .takontakt {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
 }
 
 /* MENY */
 
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: white;
-    min-height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  min-height: 8vh;
 }
 
 .nav-links {
-    display: flex;
-    text-decoration: none;
-    width: 40%;
-    justify-content: space-around;
+  display: flex;
+  text-decoration: none;
+  width: 40%;
+  justify-content: space-around;
 }
 
 .nav-links li {
-    list-style: none;
+  list-style: none;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #a27f80;
-    font-size: 19px;
-    font-family: rift-soft, sans-serif;
-    font-weight: 500;
-    font-style: normal;
+  text-decoration: none;
+  color: #a27f80;
+  font-size: 19px;
+  font-family: rift-soft, sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .hamburger div {
-    background-color: #a27f80;
-    height: 3px;
-    width: 25px;
-    margin: 5px;
+  background-color: #a27f80;
+  height: 3px;
+  width: 25px;
+  margin: 5px;
 }
 
 a:hover {
-    color: #d5bab3;
+  color: #d5bab3;
 }
 
 .hamburger {
-    display: none;
+  display: none;
 }
 
 /* MOBIL */
@@ -96,60 +96,60 @@ a:hover {
 /* MENY */
 
 @media screen and (max-width: 799px) {
-    body {
-        overflow-x: hidden;
-    }
+  body {
+    overflow-x: hidden;
+  }
 
-    .cta-btn {
-        width: 25%;
-        font-size: 14px;
+  .cta-btn {
+    width: 25%;
+    font-size: 14px;
 
-        font-family: rift-soft, sans-serif;
-        font-weight: 500;
-        font-style: normal;
-    }
+    font-family: rift-soft, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
 
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
 
-    .nav-links {
-        position: absolute;
-        right: 0px;
-        top: 10vh;
-        height: 25vh;
-        background-color: white;
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    top: 10vh;
+    height: 25vh;
+    background-color: white;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
 
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
 
-    .nav-links li {
-        opacity: 1;
-    }
+  .nav-links li {
+    opacity: 1;
+  }
 
-    /* VELKOMMEN */
+  /* VELKOMMEN */
 
-    .velkommen {
-        font-size: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20%;
-    }
+  .velkommen {
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+  }
 
-    .aspargesg {
-        font-size: 45px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .aspargesg {
+    font-size: 45px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .nav-active {
-    transform: translateX(0%);
+  transform: translateX(0%);
 }

@@ -1,39 +1,39 @@
 .kontakt {
-    color: #b7a8a2;
-    font-family: luxus-brut, cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 100px;
-    margin-left: 200px;
-    margin-top: 50px;
+  color: #b7a8a2;
+  font-family: luxus-brut, cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  margin-left: 200px;
+  margin-top: 50px;
 }
 
 .kontaktinfo {
-    margin-left: 180px;
+  margin-left: 180px;
 }
 
 .kalender {
-    margin-left: 800px;
-    margin-top: -400px;
+  margin-left: 800px;
+  margin-top: -400px;
 }
 
 /* MOBIL */
 
 @media screen and (max-width: 799px) {
-    .kontakt {
-        font-size: 70px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .kontakt {
+    font-size: 70px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .kontaktinfo {
-        margin-right: auto;
-        margin-left: auto;
-    }
+  .kontaktinfo {
+    margin-right: auto;
+    margin-left: auto;
+  }
 
-    .kalender {
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 20px;
-    }
+  .kalender {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+  }
 }

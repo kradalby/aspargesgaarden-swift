@@ -1,136 +1,136 @@
 .overskrift {
-    color: #b7a8a2;
-    margin-bottom: -20px;
-    font-family: luxus-brut, cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
+  color: #b7a8a2;
+  margin-bottom: -20px;
+  font-family: luxus-brut, cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
 /* Hide the images by default */
 .mySlides {
-    display: none;
+  display: none;
 }
 
 /* Next & previous buttons */
 .prev,
 .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-    background-color: #757471;
+  background-color: #757471;
 }
 
 /* bildetekst */
 .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: roboto, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color: #9c8d87;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #9c8d87;
 }
 
 /* dottene */
 .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #b6a7a1;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #b6a7a1;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
 .active,
 .dot:hover {
-    background-color: #dcaca3;
+  background-color: #dcaca3;
 }
 
 /* fading animation */
 .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* MOBIL */
 
 @media screen and (max-width: 799px) {
-    .overskrift {
-        font-size: 70px;
-        margin-bottom: 20px;
-    }
+  .overskrift {
+    font-size: 70px;
+    margin-bottom: 20px;
+  }
 
-    .bildeen,
-    .bildeto,
-    .bildetre,
-    .bildefire,
-    .bildefem {
-        height: 250px;
-    }
+  .bildeen,
+  .bildeto,
+  .bildetre,
+  .bildefire,
+  .bildefem {
+    height: 250px;
+  }
 
-    .text {
-        font-size: 14px;
-    }
+  .text {
+    font-size: 14px;
+  }
 }
