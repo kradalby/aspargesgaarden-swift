@@ -1,8 +1,10 @@
 ---
 {
+  "dns_config": { "nameservers": ["1.1.1.1", "1.0.0.1"] },
   "kind": "pipeline",
   "name": "Kubernetes",
   "node_selector": { "drone": true },
+  "platform": { "arch": "amd64", "os": "linux" },
   "steps":
     [
       {
@@ -11,7 +13,7 @@
             "npm install prettier",
             'npx prettier --check "**/*.{ts,js,md,yaml,yml,sass,css,scss}"',
           ],
-        "image": "node:lts",
+        "image": "node:lts-buster",
         "name": "Prettier lint",
         "pull": "always",
       },
@@ -33,7 +35,12 @@
           {
             "password": { "from_secret": "docker_password" },
             "repo": "kradalby/aspargesgaarden2",
-            "tags": ["latest", "${DRONE_COMMIT_SHA:0:8}"],
+            "tags":
+              [
+                "latest",
+                "latest-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}",
+                "${DRONE_COMMIT_SHA:0:8}",
+              ],
             "username": { "from_secret": "docker_username" },
           },
         "when": { "branch": ["master"], "event": ["push"] },
