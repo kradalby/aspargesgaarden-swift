@@ -1,11 +1,19 @@
-FROM node:12 as builder
+FROM node:12 as css-builder
 WORKDIR /app
 
-RUN yarn global add sergey
+COPY . .
+RUN yarn
+RUN yarn tailwindcss build theme.css -o Resources/styles.css -c tailwind.config.js
+
+FROM swift:5.4-bionic AS builder
+
+WORKDIR /app
 
 COPY . .
-RUN sergey --output=dist
+COPY --from=css-builder /app/Resources/styles.css Resources/style.css
+
+RUN swift run
 
 
 FROM nginx:latest as production
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/Output /usr/share/nginx/html
