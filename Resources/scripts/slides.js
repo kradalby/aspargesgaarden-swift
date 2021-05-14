@@ -12,6 +12,7 @@ function nextSlide() {
   let nextSlide = activeSlide.nextElementSibling;
   nextSlide.classList.remove("translate-x-full", "opacity-0");
   nextSlide.classList.add("translate-x-0");
+  activeSlide.classList.remove("-translate-x-full");
 }
 
 function previousSlide() {
@@ -27,13 +28,18 @@ function previousSlide() {
 function resetSlides() {
   document.querySelectorAll(".slide").forEach((slide, index) => {
     if (index === 0) {
-      slide.classList.add("translate-x-0", "-translate-x-full");
-      slide.classList.remove("translate-x-full", "opacity-0");
+      slide.classList.add("translate-x-0");
+      slide.classList.remove(
+        "translate-x-full",
+        "translate-x-full",
+        "opacity-0"
+      );
     } else {
       slide.classList.remove("-translate-x-full");
       slide.classList.add("translate-x-full", "opacity-0");
     }
   });
+  nextSlide();
 }
 
 function setNextTimeout() {
