@@ -6,8 +6,6 @@ extension Node where Context == HTML.BodyContext {
 
   static func renderGallery() -> Node {
     let images = getImages()
-    let first = images[0]
-    let rest = images[1...]
     return div(
       .class("swiper-container w-full md:w-4/5"),
       .div(
