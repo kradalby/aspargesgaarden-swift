@@ -10,10 +10,9 @@ FROM swift:5.4-bionic AS builder
 WORKDIR /app
 
 COPY . .
-COPY --from=css-builder /app/Resources/styles.css Resources/style.css
+COPY --from=css-builder /app/Resources/styles.css Resources/styles.css
 
 RUN swift run
-
 
 FROM nginx:latest as production
 COPY --from=builder /app/Output /usr/share/nginx/html
