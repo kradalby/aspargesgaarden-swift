@@ -9,29 +9,57 @@ extension Node where Context == HTML.BodyContext {
     let first = images[0]
     let rest = images[1...]
     return div(
-      .class("h-screen"),
+      .class("swiper-container w-full md:w-4/5"),
       .div(
-        .class("relative w-2/3 mx-auto"),
-        .div(
-          .class("absolute transition-all ease-in-out duration-1000 transform translate-x-0 slide"),
-          .img(.src("/bilder/\(first)"))
-        ),
-        .forEach(rest) { image in
+        .class("swiper-wrapper"),
+        .forEach(images) { image in
           .div(
-            .class(
-              "absolute opacity-0 transition-all ease-in-out duration-1000 transform translate-x-full slide"
-            ),
-            .img(.src("/bilder/\(image)"))
+            .class("swiper-slide"),
+            .img(.src("/slides/\(image)"))
           )
-        },
-        .script(.src("/scripts/slides.js"))
-      )
+        }
+      ),
+      .div(
+        .class("swiper-pagination")
+      ),
+      .div(
+        .class("swiper-button-prev text-brown-link-active")
+      ),
+      .div(
+        .class("swiper-button-next text-brown-link-active")
+      ),
+      // .script(.src("https://unpkg.com/swiper/swiper-bundle.min.js")),
+      // .script(.src("/scripts/slides.js"))
+      .script(
+        .attribute(named: "type", value: "module"),
+        .text(
+          """
+          import Swiper from "https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js";
+          const swiper = new Swiper(".swiper-container", {
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+              el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+              delay: 5000,
+            },
+          });
+          """
+        ))
     )
   }
 
   static func getImages() -> [String] {
     do {
-      return try Folder(path: "Resources/bilder").files.enumerated().map { (index, file) in
+      return try Folder(path: "Resources/slides").files.enumerated().map { (index, file) in
         file.name
       }
     } catch {

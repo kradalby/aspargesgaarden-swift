@@ -55,7 +55,9 @@ where Site: AspargesgaardenWebsite {
   ) throws -> HTML {
     HTML(
       .lang(context.site.language),
-      .head(for: page, on: context.site),
+      .head(
+        for: page, on: context.site,
+        stylesheetPaths: ["https://unpkg.com/swiper/swiper-bundle.min.css", "/styles.css"]),
       .body(
         .class(bodyCss),
         .header(for: context, selectedSection: nil),
@@ -202,7 +204,7 @@ extension Node where Context == HTML.BodyContext {
     return div(
       .class("w-36 lg:w-44 py-3 mx-auto"),
       .a(
-        .href("/about"),
+        .href("/contact"),
         .img(.src("/ikoner/takontakt.png"), .alt("Ta kontakt")))
     )
   }
