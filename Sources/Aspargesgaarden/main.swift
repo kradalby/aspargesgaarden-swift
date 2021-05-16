@@ -31,11 +31,4 @@ struct Webpage: Website, AspargesgaardenWebsite {
 }
 try Webpage().publish(
   withTheme: .aspargesgaarden,
-  additionalSteps: [
-    .step(named: "Default section titles") { context in
-      context.mutateAllSections { section in
-        guard section.title.isEmpty else { return }
-
-      }
-    }
-  ])
+  additionalSteps: [])

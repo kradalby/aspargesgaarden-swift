@@ -23,7 +23,7 @@ extension Node where Context == HTML.BodyContext {
         )
       ),
       .div(
-        .class("relative mx-auto lg:w-244 py-8 md:py-12"),
+        .class("relative mx-auto lg:w-236 py-8 md:py-12"),
         .img(
           .class("relative top-0 left-0"),
           .src("/bilder/laaven2.jpg"),
