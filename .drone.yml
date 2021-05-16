@@ -18,6 +18,16 @@
         "pull": "always",
       },
       {
+        "commands":
+          [
+            "swift-format format --recursive  Sources/ Package.swift",
+            "swift-format lint --recursive  Sources/ Package.swift",
+          ],
+        "image": "kradalby/swift-format:5.4",
+        "name": "Swift lint",
+        "pull": "always",
+      },
+      {
         "environment": { "DOCKER_BUILDKIT": 1 },
         "image": "plugins/docker",
         "name": "Build container image",
