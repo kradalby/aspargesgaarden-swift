@@ -1,6 +1,6 @@
 module.exports = {
   purge: {
-    enabled: false,
+    enabled: true,
     content: ["Sources/**/Theme*.swift"],
   },
   darkMode: false, // or 'media' or 'class'
