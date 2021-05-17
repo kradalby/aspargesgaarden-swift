@@ -240,6 +240,14 @@ extension Node where Context == HTML.BodyContext {
               ), .href(contactPoint.url(handler)), contactPoint.img)
           }
         )
+      ),
+      .script(
+        .src("https://umami.kradalby.no/umami.js"),
+        .async(), .defer(),
+        .attribute(
+          named: "data-website-id",
+          value: "168bd9f6-fec6-40dc-95b5-b0e4082c7a98"
+        )
       )
     )
   }
